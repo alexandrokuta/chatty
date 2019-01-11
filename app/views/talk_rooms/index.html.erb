@@ -1,0 +1,12 @@
+<h3>現在のユーザID: <%= current_user.id %></h3>
+<div id='talk_rooms'>
+    <% @talk_rooms.each do |talk_room| %>
+        <div><%= "#{talk_room.user_id} : #{talk_room.message}" %></div>
+    <% end %>
+</div>
+<br/>
+<form>
+    <label>
+        発言する: <input type="text" data-behavior="speak_talk_rooms">
+    </label>
+</form>
